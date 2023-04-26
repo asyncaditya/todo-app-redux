@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.App {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.userInput {
+    background-color: rgb(249, 195, 195);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.userInput input {
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.userInput button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.todos {
+    background-color: rgb(247, 247, 172);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+    padding: 10px;
+    gap:10px
+}
+
+.todo{
+    border: solid black 1px;
+    padding: 10px;
+}
