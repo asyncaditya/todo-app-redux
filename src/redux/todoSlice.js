@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 let initialState = {
-    todos: []
+    todos: [],
+    currentEditIndex: false
 }
 
 let todoSlice = createSlice({
@@ -10,9 +11,19 @@ let todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             state.todos.push(action.payload)
+        },
+        deleteTodo: (state, action) => {
+            state.todos.splice(action.payload, 1);
+        },
+        saveEditIndex:(state,action)=>{
+            state.currentEditIndex =action.payload;
+        },
+        editMyTodo:(state,action)=>{
+            state.todos[state.currentEditIndex]=action.payload;
+            state.currentEditIndex=false;
         }
     }
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo,saveEditIndex,editMyTodo } = todoSlice.actions;
 export default todoSlice.reducer;

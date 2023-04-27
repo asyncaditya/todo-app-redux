@@ -7,8 +7,8 @@ function Todos() {
     return (
         <div className="todos">
             {
-                todos.map(todo => {
-                    return <Todo item={todo} />
+                todos.map((todo,index) => {
+                    return <Todo item={todo} todoIndex={index} />
                 })
             }
         </div>
